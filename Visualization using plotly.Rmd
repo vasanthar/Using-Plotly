@@ -1,0 +1,28 @@
+---
+title: "Visualization using Plotly"
+author: "Vasantha"
+date: "22/05/2020"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## IRIS
+
+```{r, message=FALSE, warning=FALSE, echo = TRUE}
+library(plotly)
+data("iris")
+plot_ly(x = iris$Sepal.Length, y = iris$Petal.Length, mode = 'markers', color = as.factor(iris$Species), xaxis = list(title = "Sepal length"), yaxis = list(title = "Petal length"))
+```
+
+## Summary of IRIS dataset
+
+```{r cars, echo = TRUE}
+summary(iris)
+```
+
+## Thank you
+
+
